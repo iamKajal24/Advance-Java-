@@ -14,10 +14,35 @@
 		<welcome-file>default.htm</welcome-file>
 	</welcome-file-list>
 
+
+	<!-- remove Jsp extension -->
+	<servlet>
+		<servlet-name>index</servlet-name>
+		<jsp-file>/index.jsp</jsp-file>
+	</servlet>
+
+	<!-- mapping -->
+	<servlet-mapping>
+		<servlet-name>index</servlet-name>
+		<url-pattern>/index</url-pattern>
+		<url-pattern>/kajal</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>operation</servlet-name>
+		<jsp-file>/Operation.jsp</jsp-file>
+	</servlet>
+
+	<!-- mapping -->
+	<servlet-mapping>
+		<servlet-name>operation</servlet-name>
+		<url-pattern>/Operation</url-pattern>
+		<url-pattern>/kajal pandit</url-pattern>
+	</servlet-mapping>
+
 	<error-page>
 		<error-code>404</error-code>
 		<location>/404error.jsp</location>
-
 	</error-page>
 
 
