@@ -21,10 +21,10 @@ public class StartDemo {
 
         // Creating Student object
         Student student = new Student();
-        student.setId(1414);
-        student.setName("PRIYA");
-        student.setCity("HARIDWAR");
-        student.setCerti(new Certificate("Java Hibernate Course", "2 months"));
+        student.setId(1569);
+        student.setName("RAHUL");
+        student.setCity("DEHRADUN");
+        student.setCerti(new Certificate("SPRINGBOOT", "3 months"));
 
         // Student: Transient state
         Session session = factory.openSession();
@@ -40,15 +40,15 @@ public class StartDemo {
             session.close();
             
             //student:Detached
-            student.setName("SACHIN");
-            System.out.println(student);
+            //student.setName("SACHIN");
+            //System.out.println(student);
         } catch (Exception e) {
-            if (tx != null) {
-                tx.rollback();
-            }
+//            if (tx != null) {
+//                tx.rollback();
+//            }
             e.printStackTrace();
         } finally {
-//            session.close();
+            session.close();
         }
 
         // Closing the factory
